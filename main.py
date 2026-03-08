@@ -57,21 +57,16 @@ def scan(
         ]
         
         try:
-            # Perform the external search
-            search_results = search(
-                brief=f"Search for Laravel {search_version} vulnerabilities and exploits",
-              type='research',
-                queries=queries
-            )
-            
-
+            # In a real scenario, we would perform an external search here.
+            # For now, we'll pass a placeholder to the module.
+            search_results = {"queries": queries, "note": "External search results would be processed here."}
             
             vulnerability_module = VulnerabilityLookupModule(target_url, client)
             vulnerability_results = vulnerability_module.run(version_info, search_results)
             all_results["vulnerability_lookup"] = vulnerability_results
             
         except Exception as e:
-            print_output.error(f"Vulnerability Lookup search failed: {e}")
+            print_output.error(f"Vulnerability Lookup failed: {e}")
 
     # 2. Core Security Checks
     print_output.info("Running Core Security Checks module...")
