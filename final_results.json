@@ -1,0 +1,47 @@
+{
+    "fingerprint": {
+        "Laravel Session Cookie": {
+            "status": "FOUND",
+            "value": "Present in response headers"
+        },
+        "X-Powered-By Header": {
+            "status": "FOUND",
+            "value": "PHP/8.0.30"
+        },
+        "Framework Detection": {
+            "status": "CONFIRMED",
+            "value": "Laravel (High Confidence)"
+        },
+        "Version": {
+            "status": "FOUND",
+            "version": "v9.17.0"
+        }
+    },
+    "core_checks": {
+        "Exposed .env File": {
+            "status": "VULNERABLE",
+            "severity": "CRITICAL",
+            "value": "Exposed .env file found at https://www.emmas-moda.com/.env"
+        },
+        "Debug Mode Leak": {
+            "status": "SAFE",
+            "severity": "LOW",
+            "value": "No obvious debug indicators found"
+        },
+        "Storage/Logs Exposure": {
+            "status": "VULNERABLE",
+            "severity": "HIGH",
+            "value": "Exposed log content found at https://www.emmas-moda.com/storage/logs/laravel.log"
+        },
+        "Vendor Path Leak": {
+            "status": "VULNERABLE",
+            "severity": "MEDIUM",
+            "value": "Exposed vendor path found at https://www.emmas-moda.com/vendor/autoload.php"
+        },
+        "PHPUnit Path Leak": {
+            "status": "VULNERABLE",
+            "severity": "MEDIUM",
+            "value": "Exposed PHPUnit path found at https://www.emmas-moda.com/phpunit.xml"
+        }
+    }
+}
